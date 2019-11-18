@@ -1,4 +1,4 @@
-package com.example.electronics.data
+package com.example.electronics
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
