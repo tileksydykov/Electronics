@@ -3,13 +3,12 @@ package com.example.electronics.adapters
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.electronics.R
-import com.example.electronics.models.Cheker
+import com.example.electronics.models.Checker
 import kotlinx.android.synthetic.main.adapter_item.view.*
 
-class Adapter(private val myDataset: ArrayList<Cheker>) :
+class Adapter(private val myDataset: ArrayList<Checker>) :
     RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
     class MyViewHolder(val linearLayout: LinearLayout) : RecyclerView.ViewHolder(linearLayout)

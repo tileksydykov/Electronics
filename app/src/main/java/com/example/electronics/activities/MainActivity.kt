@@ -1,17 +1,15 @@
-package com.example.electronics
+package com.example.electronics.activities
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.electronics.R
 import com.example.electronics.adapters.Adapter
 import com.example.electronics.data.DB
-import com.example.electronics.models.Cheker
-import io.paperdb.Paper
 
 import kotlinx.android.synthetic.main.activity_main.*
 

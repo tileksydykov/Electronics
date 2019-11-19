@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "269160155233",
+    "firebase_url": "https://fireprint-c310b.firebaseio.com",
+    "project_id": "fireprint-c310b",
+    "storage_bucket": "fireprint-c310b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269160155233:android:3199865b5fa44e5d3d8220",
+        "android_client_info": {
+          "package_name": "com.example.electronics"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269160155233-1n87j4t2n658jrkn8hjg5n4q9t9ho73j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-AV9cOljAQ6ZGvg3ZSKMfqth6mo1NT6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269160155233-1n87j4t2n658jrkn8hjg5n4q9t9ho73j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269160155233:android:a56f6c7ca1e654093d8220",
+        "android_client_info": {
+          "package_name": "kg.flaterlab.fireprint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269160155233-1n87j4t2n658jrkn8hjg5n4q9t9ho73j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-AV9cOljAQ6ZGvg3ZSKMfqth6mo1NT6w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269160155233-1n87j4t2n658jrkn8hjg5n4q9t9ho73j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

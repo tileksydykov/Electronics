@@ -1,5 +1,6 @@
 package com.example.electronics
 
+import com.google.firebase.database.FirebaseDatabase
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -10,8 +11,13 @@ import org.junit.Assert.*
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class ExampleUnitTest {
+
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun hellTest(){
+        val db = FirebaseDatabase.getInstance()
+        val refChekers = db.getReference("chekers")
+
+        println(refChekers.child("1231243"))
     }
+
 }
