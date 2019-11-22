@@ -4,48 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".activities.AddCheckerActivity">
+
 
     <TextView
         android:id="@+id/label"
-        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="80dp"
         android:text="Add New Cheker By Hand"
-        android:layout_margin="10dp"
-        android:textSize="20sp"/>
-
-    <android.inputmethodservice.ExtractEditText
-        android:id="@+id/name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/label"
-        android:layout_margin="10dp"/>
-
-    <Button
-        android:id="@+id/tap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
-
-
-    <TextView
-        android:id="@+id/label2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="Add New Cheker By QR CODE"
+        android:visibility="gone"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@+id/tap" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="25dp" />
 
-    <Button
-        android:id="@+id/open_scanner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Open scanner"
-        android:layout_margin="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/label2"/>
+    <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="41dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_android" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/welcomr_tit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:fontFamily="serif"
+            android:text="@string/welcomr_tit"
+            android:textAppearance="@style/welcomr_tit"
+            android:textColor="@color/androidColor"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="149dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="99dp"
+            app:cardBackgroundColor="@color/colorSky"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomr_tit"
+            tools:ignore="MissingConstraints">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/colorDark"
+                android:cursorVisible="true"
+                android:descendantFocusability="beforeDescendants"
+                android:hint="NAME"
+                android:textColorHint="@color/colorDark"
+                app:layout_constraintTop_toBottomOf="@+id/label" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="47dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="101dp"
+            app:cardBackgroundColor="@color/colorSky"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintStart_toEndOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/welcomr_tit"
+            tools:ignore="MissingConstraints">
+
+
+            <ImageView
+                android:id="@+id/pen_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="12dp"
+                app:srcCompat="@drawable/ic_pen" />
+        </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="247dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="42dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:srcCompat="@drawable/qrcode" />
+
+        <Button
+            android:id="@+id/open_scanner"
+            android:layout_width="256dp"
+            android:layout_height="57dp"
+            android:layout_marginTop="42dp"
+            android:background="@drawable/scan_button"
+            android:fontFamily="serif"
+            android:text="SCAN"
+            android:textColor="#fff"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

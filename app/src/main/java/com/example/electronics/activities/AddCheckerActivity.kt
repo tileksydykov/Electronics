@@ -3,6 +3,7 @@ package com.example.electronics.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.lifecycle.Observer
 import com.example.electronics.R
 import com.example.electronics.data.DB
@@ -44,6 +45,7 @@ class AddCheckerActivity : AppCompatActivity() {
                     finish()
                 }
             })
+
         }
     }
 
