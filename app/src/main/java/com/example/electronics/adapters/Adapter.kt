@@ -19,7 +19,7 @@ class Adapter(private val myDataset: ArrayList<Checker>) :
         val linearLayout = LayoutInflater.from(parent.context)
             .inflate(R.layout.adapter_item, parent, false) as LinearLayout
 
-
+        linearLayout.elevation = 8.0f
         return MyViewHolder(linearLayout)
     }
 

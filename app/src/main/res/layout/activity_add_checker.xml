@@ -32,7 +32,7 @@
             app:srcCompat="@drawable/ic_android" />
 
         <TextView
-            android:id="@+id/welcomr_tit"
+            android:id="@+id/welcome_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -56,7 +56,7 @@
             app:cardBackgroundColor="@color/colorSky"
             app:cardCornerRadius="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/welcomr_tit"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_title"
             tools:ignore="MissingConstraints">
 
             <EditText
@@ -81,7 +81,7 @@
             app:cardBackgroundColor="@color/colorSky"
             app:cardCornerRadius="10dp"
             app:layout_constraintStart_toEndOf="@+id/cardView"
-            app:layout_constraintTop_toBottomOf="@+id/welcomr_tit"
+            app:layout_constraintTop_toBottomOf="@+id/welcome_title"
             tools:ignore="MissingConstraints">
 
 
