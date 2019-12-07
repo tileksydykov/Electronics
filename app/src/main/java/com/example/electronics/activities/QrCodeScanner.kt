@@ -25,7 +25,6 @@ class QrCodeScanner : AppCompatActivity(), ZXingScannerView.ResultHandler {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
             != PackageManager.PERMISSION_GRANTED
         ) {
-            // Permission is not granted
             ActivityCompat.requestPermissions(
                 this,
                 arrayOf(Manifest.permission.CAMERA), 1
