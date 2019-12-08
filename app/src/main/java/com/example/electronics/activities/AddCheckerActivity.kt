@@ -37,7 +37,7 @@ class AddCheckerActivity : AppCompatActivity() {
             val cheker = f.isExistChecker(contents!!)
 
             cheker.observe(this, Observer {
-                if (it.id > 0) {
+                if (it.id != "0") {
                     db.addCheker(it)
                     setResult(1, Intent())
                     finish()

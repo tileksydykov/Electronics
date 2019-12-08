@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         val myDataset = db.getCheckers()
 
         viewManager = LinearLayoutManager(this)
-        viewAdapter = Adapter(myDataset)
+        viewAdapter = Adapter(myDataset, this)
 
         recyclerView = findViewById<RecyclerView>(R.id.my_recycler_view).apply {
             setHasFixedSize(true)
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == 1) {
-            recyclerView.adapter = Adapter(db.getCheckers())
+            recyclerView.adapter = Adapter(db.getCheckers(), this)
         }
     }
 }

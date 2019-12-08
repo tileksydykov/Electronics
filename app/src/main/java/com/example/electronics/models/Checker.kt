@@ -5,7 +5,8 @@ import com.google.firebase.database.IgnoreExtraProperties
 
 @IgnoreExtraProperties
 data class Checker(
-    val id: Long,
+    val id: String,
     val name: String,
+    var localName : String,
     val auditorium: String
 )

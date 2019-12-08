@@ -1,14 +1,18 @@
 package com.example.electronics.adapters
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.electronics.R
+import com.example.electronics.activities.StudentsActivity
 import com.example.electronics.models.Checker
 import kotlinx.android.synthetic.main.adapter_item.view.*
 
-class Adapter(private val myDataset: ArrayList<Checker>) :
+class Adapter(private val myDataset: ArrayList<Checker>, val context: AppCompatActivity) :
     RecyclerView.Adapter<Adapter.MyViewHolder>() {
 
     class MyViewHolder(val linearLayout: LinearLayout) : RecyclerView.ViewHolder(linearLayout)
@@ -23,15 +27,14 @@ class Adapter(private val myDataset: ArrayList<Checker>) :
         return MyViewHolder(linearLayout)
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
-        holder.linearLayout.text.text = myDataset[position].name
+        holder.linearLayout.text.text = myDataset[position].localName
+        holder.linearLayout.setOnClickListener{
+            val i = Intent(context, StudentsActivity::class.java)
+            i.putExtra("id", myDataset[position].id)
+            context.startActivity(i)
+        }
     }
 
-
-
-    // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = myDataset.size
 }

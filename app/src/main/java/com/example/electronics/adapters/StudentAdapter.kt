@@ -9,7 +9,7 @@ import com.example.electronics.R
 import com.example.electronics.models.Student
 import kotlinx.android.synthetic.main.student_adapter_item.view.*
 
-class StudentAdapter(private val myDataset: Array<Student>, private val context :AppCompatActivity) :
+class StudentAdapter(private var myDataset: ArrayList<Student>, private val context :AppCompatActivity) :
         RecyclerView.Adapter<StudentAdapter.MyViewHolder>() {
     class MyViewHolder(val linearLayout: LinearLayout) : RecyclerView.ViewHolder(linearLayout)
 
@@ -27,4 +27,9 @@ class StudentAdapter(private val myDataset: Array<Student>, private val context 
         holder.linearLayout.inner.time.text = p.getHourMinute()
     }
     override fun getItemCount() = myDataset.size
+
+    fun update(myDataset: ArrayList<Student>){
+        this.myDataset = myDataset
+        notifyDataSetChanged()
+    }
 }
