@@ -9,6 +9,7 @@ import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.ValueEventListener
 import com.example.electronics.models.Checker
 import com.example.electronics.models.Student
+import kotlin.math.roundToLong
 
 
 class Firebase {
@@ -25,19 +26,20 @@ class Firebase {
 
     fun getChecks(id: String): MutableLiveData<ArrayList<Student>> {
         val result: MutableLiveData<ArrayList<Student>> = MutableLiveData()
-        val localData = arrayListOf<Student>()
 
         val postListener = object : ValueEventListener {
             override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val localData = arrayListOf<Student>()
                 val checks = dataSnapshot.children
                 checks.forEach{
                     val user = it.child("user").value.toString()
                     val time = it.child("time").value as Double
-                    val t : Long = time.toLong()
+                    val t = time.roundToLong() * 1000
                     localData.add(
                         Student(
                             user,
-                            localDB.getStudentName(user),
+                            // localDB.getStudentName(user),
+                            user,
                             t
                         )
                     )

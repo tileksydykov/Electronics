@@ -20,7 +20,7 @@ class StudentAdapter(private var myDataset: ArrayList<Student>, private val cont
 
         return MyViewHolder(linearLayout)
     }
-
+ 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val p :Student =  myDataset[position]
         holder.linearLayout.inner.name.text = p.name

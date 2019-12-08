@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.electronics.Helper.ArrayHelper
 import com.example.electronics.R
 import com.example.electronics.adapters.Adapter
 import com.example.electronics.adapters.StudentAdapter
@@ -36,7 +37,8 @@ class StudentsActivity : AppCompatActivity() {
         }
 
         data.observe(this, Observer {
-            viewAdapter.update(it)
+            val arr = ArrayHelper.makeArrayUnique(it)
+            viewAdapter.update(arr)
         })
     }
 }
